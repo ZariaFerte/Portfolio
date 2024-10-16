@@ -1,0 +1,717 @@
+/* Style global */
+:root {
+    --pink: #D90368;
+    --purple: #820263;
+    --orange: #FB8B24;
+    --grey: #f4f4f4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    background-color: White;
+    font-family: "Sansita", sans-serif;
+    color: var(--purple);
+    margin: 0 ;
+}
+
+p{
+    padding: 0;
+    margin: 0 ;
+    font-family: "Sansita", sans-serif;   
+    font-size: clamp(14px, 1.1vw, 35px); 
+}
+
+h1 {
+    margin: 0 ;
+    padding: 0;
+    font-family: "Berkshire Swash", serif;
+}
+
+h2{
+    padding: 0;
+    margin: 0 ;
+    font-family: "Berkshire Swash", serif;
+    text-align: center;
+    font-size: clamp(14px, 3vw, 35px);
+}
+
+h3{
+    margin: 0 ;
+    padding: 0;
+    margin-bottom: 20px;
+    font-family: "Sansita", sans-serif;
+    font-size: clamp(14px, 1.8vw, 35px);
+    font-weight: bold; /* Makes text bold */
+    
+}
+
+h4{
+    margin: 0 ;
+    padding: 0;
+    font-family: "Sansita", sans-serif;
+    font-size: clamp(14px, 1.6vw, 35px);
+    text-decoration: underline;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.left-text {
+    text-align: left;
+}
+
+.right-text {
+    text-align: right;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    margin-left:10px;
+}
+
+li{
+    margin: 20px 0;
+    font-size: clamp(14px, 1.3vw, 18px); 
+    
+}
+
+/* Style du header */
+header {
+    background-color: var(--grey);
+    color: var(--orange);
+    padding: 1rem;
+    text-align: center;
+    font-size: clamp(10px, 1.7vw, 32px);
+}
+
+/* Menu de navigation */
+nav {
+    background-color: var(--grey);
+    padding: 1rem;
+    position: fixed; /*menu reste en haut même quand on scroll*/
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    font-size: 15px;
+    box-shadow: 0 2px 2px var(--pink);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: var(--pink);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover { /* couleur au survol*/
+    color: var(--orange);
+}
+
+/* Ajout de marge pour éviter que le menu fixe recouvre le contenu */
+body {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+
+/* Style des sections */
+section {
+    margin: 0; /*Aucune marge extérieure*/
+    padding: 0; /* Aucune marge intérieure */
+    width: 100vw; /* Prendre toute la largeur de l'écran */
+    height: 100vh; /* Prendre toute la hauteur de l'écran */
+    border: none; /* Supprimer les bordures si elles existent */
+} 
+    /*
+    max-width: 900px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+
+
+/* Style de la section d'introduction */
+#introduction {
+    margin: 0; /*Aucune marge extérieure*/
+    padding: 0; /* Aucune marge intérieure */
+    max-height: 50vw;
+    display: flex; /* Active Flexbox */
+    align-items: center; /* Centre verticalement l'image et le texte */
+    justify-content: center; /* Centre horizontalement le contenu */
+    text-align: center; /* Centre le texte dans cette section */
+}
+
+.intro-container {
+    position: relative;
+    padding: 20px;
+    /*background-image: url('img/quadr.jpg');*/
+    background-size: cover; /* Ajuste la taille de l'image pour couvrir tout l'élément */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche l'image de se répéter */
+    border-radius: 15px; /* Arrondi des coins à 15px */
+    display: flex; /* Flex pour aligner l'image et le texte horizontalement */
+    align-items: center; /* Centre verticalement l'image et le texte */
+    justify-content: center; /* Centre horizontalement le contenu */
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+}
+
+.intro-container::before { /*pour mettre le fond en transparance*/
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Couche noire semi-transparente */
+    z-index: 1; /* Placé au-dessus de l'image */
+}
+
+.memoji {
+    z-index: 2;
+    max-width: 20vw; 
+    width: 18vw; /* Ajuste la taille de l'image selon tes préférences */
+    margin-right: 5vw; /* Espacement entre l'image et le texte */
+}
+
+.presentation {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 30vw; /* Limite la largeur du texte */
+}
+
+.presentation p{
+    text-align: center;
+    font-size: clamp(12px, 2.5vw, 35px);
+}
+
+.presentation a.more{
+    align-self: flex-end;
+    font-size: clamp(5px, 1.1vw, 14px);
+    color: var(--orange);
+}
+
+.presentation a.more:hover {
+    color: var(--pink); /* Change la couleur lors du survol */
+    }
+
+/* Style des rectangles */
+#rectangles {
+    margin: 0; /*Aucune marge extérieure*/
+    padding: 0; /* Aucune marge intérieure */
+    display: flex;
+    flex-wrap: wrap; /* Permet aux rectangles de s'ajuster à la largeur de l'écran */
+    justify-content: center; /* Centre les rectangles */
+    padding: 0;
+}
+
+.rectangle {
+    width: 20vw; /* Largeur de chaque rectangle */
+    max-width: 200px;
+    max-height: 300px;
+    height: 30vw; /* Hauteur de chaque rectangle */
+    background-color: var(--orange); /* Couleur de fond verte */
+    color: white;
+    margin: 1vw; /* Espacement entre les rectangles */
+    text-align: center;
+    padding: 0;
+    border-radius: 15px; /* Coins arrondis */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition douce pour le changement de couleur */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer; /* Change le curseur au survol */
+}
+
+.rectangle:hover {
+    transform: scale(1.05); /* Agrandit légèrement l'élément au survol */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: var(--pink); /* Changement de couleur au survol */
+}   
+
+.icon {
+    width: 11vw; /* Taille de l'icône */
+    max-width: 120px;
+    margin-bottom: 0.4vw; /* Espacement en bas de l'icône */
+}
+
+.rectangle p {
+    text-align: center;
+    margin-top: 0px;
+    font-size: clamp(12px, 1.8vw, 20px);
+}
+
+.rect_project {
+    width: 30vw; /* Largeur de chaque rectangle */
+    max-width: 300px;
+    display: flex; /* Flexbox pour organiser les éléments */
+    flex-direction: column; /* Empile les éléments en colonne (image, puis texte) */
+    justify-content: flex-start; /* L'image reste en haut */
+    align-items: center; /* Centre horizontalement l'image et le texte */
+    background-color: var(--orange); /* Couleur de fond verte */
+    color: white;
+    margin: 1vw; /* Espacement entre les rectangles */
+    padding: 0;
+    border-radius: 5%; /* Coins arrondis */
+    transition: background-color 0.3s; /* Transition douce pour le changement de couleur */
+    cursor: pointer; /* Change le curseur au survol */
+}
+.rect_project:hover {
+    background-color: var(--pink); /* Changement de couleur au survol */
+    transform: scale(1.05); /* Agrandit légèrement l'élément au survol */
+}
+
+.rect_project p{
+    
+    display: flex; /* Active Flexbox pour le texte */
+    justify-content: center; /* Centre horizontalement le texte */
+    align-items: center; /* Centre verticalement le texte */
+    text-align: center; /* Centre le texte */
+    max-width: 28vw; /* Limite la largeur du texte */
+    font-size: clamp(12px, 1.8vw, 20px);
+}
+
+.photo{
+    width: 28vw; /* Ajuste la taille de l'image selon tes préférences */
+    max-width: 280px; 
+    height: auto;
+    border-radius: 5%; /* Arrondit l'image */
+    margin-bottom: 1vw;
+    margin-top: 1vw;
+}
+
+/* Styles spécifiques pour chaque rectangle */
+.project1 {
+    height: 33vw; /* Hauteur spécifique */
+    max-height: 330px;
+    background-color: var(--orange); /* Couleur de fond spécifique */
+}
+
+.project2 {
+    height: 38vw;
+    max-height: 380px;
+    background-color: var(--orange); /* Couleur différente pour le project 2 */
+}
+
+.project3 {
+    height: 29vw;
+    max-height: 290px;
+    background-color: var(--orange); 
+}
+
+p{
+    margin:10px;
+}
+
+footer {
+    text-align: center;
+    padding: 0;
+    background-color: var(--grey);
+    color: var(--pink);
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    margin : 0;
+    bottom: 0;
+    font-size: 13px;
+}
+
+
+.sidebar {
+    /*background-color: aqua;*/
+    height: 100%;
+    width: 300px; /* Largeur fixe pour la barre latérale */
+    color: var(--purple); /* Couleur du texte */
+    padding: 10px; /* Espacement interne */
+    position: fixed;  /*Position fixe */
+    display: flex; /* Active Flexbox */
+    flex-direction: column; /* Aligne les éléments verticalement */
+    justify-content: center; /* Centre verticalement le contenu */
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-bottom: 180px;
+    box-shadow: 4px 2px 5px var(--grey);
+}
+
+.sidebar p{
+    margin: 0;
+    padding: 0;
+    padding-top: 40px;
+    font-family: "Sansita", sans-serif;
+    font-size: 20px;
+    max-width: 200px;
+    color:var(--pink)
+    
+}
+
+.sidebar h1{
+    padding: 0;
+    margin: 0;
+    font-size: 40px;
+    max-width: 200px;
+}
+
+.sidebar i{
+    font-size: 50px;
+    padding-bottom: 40px; /* Espace entre l'icône et le texte */
+}
+
+.main-content {
+    display: flex; /* Disposition en ligne */
+    flex-direction: column;
+    align-items: center;
+    /*background-color: #81d872;*/
+    margin-left: 350px; /*Ajoute une marge pour éviter de chevaucher la barre latérale */
+    padding: 20px; /* Espacement interne */
+    flex-grow: 1;
+    overflow-y: auto; /* Permet de faire défiler le contenu */
+    gap:20px;
+}
+
+.rectangles_container {
+    /*background-color: #fec18b;*/
+    display: flex; /* Flexbox pour aligner les rectangles */
+    flex-wrap: wrap; /*passe sur la ligne du dessous s'il n'y a pas assez de place*/
+    gap: 2vw; /* Espacement entre les rectangles */
+    flex-grow: 1;
+}
+
+.info_container{
+    /*background-color: #caa7f5;*/
+    display: flex; /* Active Flexbox */
+    flex-direction:column;  /* Aligne les éléments horizontalement */
+    flex-grow: 1;    
+    margin: 2vw;
+    cursor: pointer;
+}
+
+.info_container h2{
+    text-align: left;
+}
+
+.info_container p{
+    padding: 0;
+    margin: 0;
+    font-family: "Sansita", sans-serif;
+    text-align:left;
+    max-width: 18vw;
+    font-size: clamp(8px, 1.5vw, 17px);
+}
+
+.info_container:hover{
+    transform: scale(1.05); /* Agrandit légèrement l'élément au survol */
+}
+.rect_projects {
+    display: flex; /* Flexbox pour organiser les éléments */
+    flex-direction: column; /* Empile les éléments en colonne (image, puis texte) */
+    align-items: center;
+    background-color: var(--pink); /* Couleur de fond des rectangles */
+    width: 20vw; /* Largeur de chaque rectangle (deux par ligne avec un espacement) */
+    height: auto;
+    padding: 0.5vw;
+    margin-bottom: 2vw; /* Espacement entre les rectangles */
+    border-radius: 6%; /* Coins arrondis */
+}
+
+.photo1{
+    width: 19vw; /* Largeur de chaque rectangle (deux par ligne avec un espacement) */
+    height: auto;
+    border-radius: 6%; /* Arrondit l'image */
+}
+
+.separator {
+    border: none; /* Enlève la bordure par défaut */
+    height: 2px; /* Épaisseur de la ligne */
+    background-color: var(--orange); /* Couleur de la ligne */
+    margin: 10px 0; /* Espacement vertical autour de la ligne */
+}
+
+
+.common-section {
+    margin: 0 auto; /*Aucune marge extérieure*/
+    padding: 0; /* Aucune marge intérieure */
+    max-width: 100%;
+    height: auto;
+    display: flex; /* Flexbox pour organiser les éléments */
+    flex-direction: column; /* Empile les éléments en colonne (image, puis texte) */
+    align-items: center;
+    padding-bottom: 50px;
+}
+.common-section p {
+    max-width: 50vw;
+    margin-bottom: 20px;    
+}
+
+.common-section h2 {
+    margin-bottom:4vw;
+    max-width: 50vw;
+}
+
+.img-center {
+    width: 170px; 
+    padding-top: 40px;
+    margin-left: 35px;
+    display: block; /* Pour rendre l'image un élément de bloc */
+    border-radius: 50%; /* Arrondit l'image */
+}
+
+
+
+.skills-section {
+    margin-top: 30px;
+}
+
+.icon-container {
+    margin: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5vw;
+}
+
+.icon-item {
+    text-align: center;
+}
+
+.icon-item i {
+    font-size: 4.3vw;
+    padding-bottom: 10px; /* Espace entre l'icône et le texte */
+    
+}
+
+.skills-list {
+    margin: 40px;
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    margin-bottom: 10px;
+}
+
+
+.section-wrapper .separator {
+    border: none;
+    height: 2px;
+    background-color: var(--orange);
+    margin: 10px 0;
+    width: 300px; /* Largeur fixe de 300px */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Process section styling */
+.process {
+    flex: 2;
+    padding-left: 20px;
+    border-left: 3px solid var(--orange);
+    margin-bottom: 20px;
+    max-width: 60%;
+}
+
+.process p {
+    margin-left: 10px;
+    color: var(--pink);
+}
+
+/* Links */
+a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Project image styling */
+.project-image {
+    max-width: 60%;
+    height: auto;
+    margin-top: 40px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-container-col {
+    display: flex;
+    gap: 20px; /* Space between the text and images */  
+}
+
+.images{
+    margin-bottom: 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 50px; /* Space between images */
+    justify-content: center;
+}
+
+.project-image {
+    width: 100%; /* Makes sure images fit in the right column */
+    height: auto; /* Keeps aspect ratio */
+    border-radius: 5px; /* Optional rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+.buttons{
+    width:100%;
+    position: absolute; /* Positionne les boutons */
+    margin-bottom: 60px; /* Space for buttons below the content */
+    margin-top: 60px; /* Space for buttons below the content */
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    text-align: center;
+
+}
+
+.buttons p{
+    font-size: 1.1vw;
+    margin:0;
+}
+
+.butt-left, .butt-right{
+    display: flex; /* Utilisation de Flexbox */
+    justify-content: center; /* Centrer horizontalement le texte */
+    align-items: center; 
+    color: white;
+    width: 7vw;
+    height: 2vw;
+    padding:0;
+    background-color: var(--pink);
+    margin-left:0px;
+    border-radius: 15px ;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.butt-left:hover, .butt-right:hover{
+    background-color: var(--orange);
+}
+
+.timeline {
+    position: relative;
+    margin: 0px 20px;
+    
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: -11px; /* Aligne la ligne à gauche */
+    top: 40px; /* Commence en haut de la timeline */
+    bottom: 0; /* S'étend jusqu'en bas de la timeline */
+    width: 2px; /* Largeur de la ligne */
+    background-color: var(--orange); /* Couleur de la ligne */
+  }
+
+.timeline-item {
+    position: relative;
+    margin: 30px 0px;
+    padding:20px;
+    padding-left: 30px;
+    background-color: #f3f3f3;
+    border-radius: 15px;
+    max-width: 50vw;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 10px;
+    height: 10px;
+    width: 10px;
+    background-color:var(--orange);
+    border-radius: 50%;
+}
+
+.timeline-item h3 {
+    font-size: clamp(14px, 1.7vw, 25px); 
+    margin-top: 0;
+}
+
+/*Timeline horizontale*/
+.timelineh-container {
+    width: 100%;
+    overflow-x: scroll; /* Permet le défilement horizontal */
+    white-space: nowrap; /* Les éléments restent sur une seule ligne */
+    padding: 20px;
+  }
+  
+  .timelineh {
+    display: inline-block;
+    width: auto; /* Ajuste la largeur en fonction du contenu */
+    position: relative;
+    border-top: 3px solid var(--orange);
+  }
+  
+  .timelineh-item {
+    display: inline-block;
+    vertical-align: top;
+    width: 350px; /* Largeur de chaque élément */
+    padding: 10px;
+    margin-right: 10px;
+    position: relative;
+  }
+  
+  .timelineh-item h4 {
+    font-size: clamp(10px,1.6vw,22px);
+    color: var(--pink);
+    margin-bottom: 5px;
+    max-width: 300px;
+    text-decoration: none;
+    white-space: normal; /* Autorise les retours à la ligne */
+  }
+  
+  .timelineh-item p {
+    font-size: clamp(8px,1.2vw,18px);
+    color: #666;
+    max-width: 330px;
+    white-space: normal; /* Autorise les retours à la ligne */
+  }
+  
+  /* Pour ajouter des points avant chaque élément */
+  .timelineh-item::before {
+    content: '●';
+    position: absolute;
+    left: -5px;
+    top: -19px;
+    color: var(--orange); /* Couleur des points */
+    font-size: 24px;
+  }
+  
+  .timelineh-item:last-child {
+    margin-right: 0; /* Pas de marge pour le dernier élément */
+  }
+  
+  /* Pour styliser la scrollbar */
+  .timelineh-container::-webkit-scrollbar {
+    height: 10px;
+  }
+  
+  .timelineh-container::-webkit-scrollbar-thumb {
+    background: var(--pink);
+    border-radius: 10px;
+  }
+  

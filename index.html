@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="10"> <!-- Rafraîchit la page toutes les 60 secondes -->
+    <title>My Portfolio</title>
+    <!-- Lien vers le fichier CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Welcome on my Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About me</a></li>
+                <li><a href="projets.html">Projets</a></li> 
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="introduction">
+        <div class="intro-container">
+            <img src="img/memoji.png" alt="Mon Memoji" class="memoji">
+            <div class="presentation">
+                <p>I am Zaria Ferté, <strong>embedded systems</strong> and <strong>UX design</strong> student.</p>
+                <a href="about.html" class="more">Know more about me </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section pour les rectangles -->
+    <section id="rectangles">
+        <div class="rectangle" onclick="location.href='about.html'">
+            <img src="img/about.png" alt="Icon about" class="icon">
+            <p>About me</p>
+        </div>
+        <div class="rectangle" onclick="location.href='projets.html'">
+            <img src="img/work.png" alt="Icon projects" class="icon">
+            <p>Projects</p>
+        </div>
+        <div class="rectangle" onclick="location.href='skills.html'">
+            <img src="img/skill.png" alt="Icon skills" class="icon">
+            <p>Skills</p>
+        </div>
+        <div class="rectangle" onclick="location.href='contact.html'">
+            <img src="img/phone.png" alt="Icon contact" class="icon">
+            <p>Contact</p>
+        </div>
+        
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Zaria Ferté</p>
+    </footer>
+</body>
+</html>

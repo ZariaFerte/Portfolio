@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="refresh" content="10"> <!-- Rafraîchit la page toutes les 60 secondes -->
+        <title>My Portfolio</title>
+        <!-- Lien vers le fichier CSS -->
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    </head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About me</a></li>
+            <li><a href="projets.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="sidebar">
+        <i class="fa-solid fa-desktop" style="color: #fda24c;"></i>
+        <h1>Projects</h1>
+        <p>Here are some of my projects related to HCI and UX design</p>
+        <!-- Ajoute plus de contenu ici si nécessaire -->
+    </div>
+    <div class="main-content">
+        <div class="rectangles_container">
+            <div class="info_container" onclick="location.href='p1.html'">
+                <div class="rect_projects">
+                    <img src="img/p1.PNG" alt="photo p1" class="photo1">
+                </div>
+                <h2>PCO software</h2>
+                <hr class="separator">
+                <p>Graz University of Technology, Austria - Development of software for a specialized luminescence camera</p>
+            </div>
+            <div class="info_container" onclick="location.href='p2.html'">
+                <div class="rect_projects">
+                    <img src="img/p2.PNG" alt="photo p2" class="photo1">
+                </div>
+                <h2>Ball on a plate</h2>
+                <hr class="separator">
+                <p>School group project, 2nd year ESIX Normandie, France</p>
+            </div>    
+        </div>
+        <div class="rectangles_container">
+            <div class="info_container" onclick="location.href='p3.html'">
+                <div class="rect_projects">
+                    <img src="img/p3.jpeg" alt="photo p1" class="photo1">
+                </div>
+                <h2>Basketball game</h2>
+                <hr class="separator">
+                <p>School group project 1st year ESIX Normandie, France</p>
+            </div>
+            <div class="info_container" onclick="location.href='p4.html'">
+                <div class="rect_projects" >
+                    <img src="img/p4.PNG" alt="photo p2" class="photo1">
+                </div>
+                <h2>HCI research</h2>
+                <hr class="separator">
+                <p>Documentary research to prototype a travel assistant application for the elderly</p>
+            </div>    
+        
+        </div>
+
+        <div class="buttons">
+            <div class="butt-left" onclick="location.href='about.html'">
+                <p>&lt; About me</p>
+            </div>  
+            <div class="butt-right" onclick="location.href='skills.html'">
+                <p>Skills &gt;</p>
+            </div>  
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Zaria Ferté</p>
+    </footer>
+</body>
+</html>
