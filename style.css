@@ -265,7 +265,7 @@ section {
     color: white;
     margin: 1vw; /* Espacement entre les rectangles */
     padding: 0;
-    border-radius: 5%; /* Coins arrondis */
+    border-radius: 15px; /* Coins arrondis */
     transition: background-color 0.3s; /* Transition douce pour le changement de couleur */
     cursor: pointer; /* Change le curseur au survol */
 }
@@ -288,7 +288,7 @@ section {
     width: 28vw; /* Ajuste la taille de l'image selon tes préférences */
     max-width: 280px; 
     height: auto;
-    border-radius: 5%; /* Arrondit l'image */
+    border-radius: 15px; /* Arrondit l'image */
     margin-bottom: 1vw;
     margin-top: 1vw;
 }
@@ -333,17 +333,18 @@ footer {
 .sidebar {
     /*background-color: aqua;*/
     height: 100%;
-    width: 300px; /* Largeur fixe pour la barre latérale */
+    width: 30vw;/*300px; /* Largeur fixe pour la barre latérale */
     color: var(--purple); /* Couleur du texte */
     padding: 10px; /* Espacement interne */
     position: fixed;  /*Position fixe */
     display: flex; /* Active Flexbox */
     flex-direction: column; /* Aligne les éléments verticalement */
     justify-content: center; /* Centre verticalement le contenu */
-    margin-left: 30px;
-    margin-right: 30px;
-    padding-bottom: 180px;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    padding-bottom: 18vw;
     box-shadow: 4px 2px 5px var(--grey);
+    max-width: 300px;
 }
 
 .sidebar p{
@@ -351,8 +352,8 @@ footer {
     padding: 0;
     padding-top: 40px;
     font-family: "Sansita", sans-serif;
-    font-size: 20px;
-    max-width: 200px;
+    font-size: clamp(13px,2vw,19px);
+    max-width: 20vw;
     color:var(--pink)
     
 }
@@ -360,13 +361,14 @@ footer {
 .sidebar h1{
     padding: 0;
     margin: 0;
-    font-size: 40px;
-    max-width: 200px;
+    max-width: 20vw;
+    font-size: clamp(20px,4vw,40px);
 }
 
 .sidebar i{
-    font-size: 50px;
-    padding-bottom: 40px; /* Espace entre l'icône et le texte */
+    font-size: 5vw;
+    font-size: clamp(25px,5vw,50px);
+    padding-bottom: 4vw; /* Espace entre l'icône et le texte */
 }
 
 .main-content {
@@ -374,7 +376,7 @@ footer {
     flex-direction: column;
     align-items: center;
     /*background-color: #81d872;*/
-    margin-left: 350px; /*Ajoute une marge pour éviter de chevaucher la barre latérale */
+    margin-left: 35vw; /*Ajoute une marge pour éviter de chevaucher la barre latérale */
     padding: 20px; /* Espacement interne */
     flex-grow: 1;
     overflow-y: auto; /* Permet de faire défiler le contenu */
@@ -423,13 +425,13 @@ footer {
     height: auto;
     padding: 0.5vw;
     margin-bottom: 2vw; /* Espacement entre les rectangles */
-    border-radius: 6%; /* Coins arrondis */
+    border-radius: 15px; /* Coins arrondis */
 }
 
 .photo1{
     width: 19vw; /* Largeur de chaque rectangle (deux par ligne avec un espacement) */
     height: auto;
-    border-radius: 6%; /* Arrondit l'image */
+    border-radius: 15px; /* Arrondit l'image */
 }
 
 .separator {
@@ -461,9 +463,10 @@ footer {
 }
 
 .img-center {
-    width: 170px; 
-    padding-top: 40px;
-    margin-left: 35px;
+    width: 15vw; 
+    max-width: 160px;
+    padding-top: 4vw;
+    margin-left: 3vw;
     display: block; /* Pour rendre l'image un élément de bloc */
     border-radius: 50%; /* Arrondit l'image */
 }
