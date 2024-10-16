@@ -163,10 +163,6 @@ section {
 .intro-container {
     position: relative;
     padding: 20px;
-    /*background-image: url('img/quadr.jpg');*/
-    background-size: cover; /* Ajuste la taille de l'image pour couvrir tout l'élément */
-    background-position: center; /* Centre l'image */
-    background-repeat: no-repeat; /* Empêche l'image de se répéter */
     border-radius: 15px; /* Arrondi des coins à 15px */
     display: flex; /* Flex pour aligner l'image et le texte horizontalement */
     align-items: center; /* Centre verticalement l'image et le texte */
@@ -180,8 +176,7 @@ section {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.5); /* Couche noire semi-transparente */
+    height: 100%; 
     z-index: 1; /* Placé au-dessus de l'image */
 }
 
