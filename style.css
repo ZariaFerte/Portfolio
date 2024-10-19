@@ -24,7 +24,7 @@ p{
     padding: 0;
     margin: 0 ;
     font-family: "Sansita", sans-serif;   
-    font-size: clamp(14px, 1.1vw, 35px); 
+    font-size: clamp(8px, 1.3vw, 35px); 
 }
 
 h1 {
@@ -33,7 +33,7 @@ h1 {
     font-family: "Berkshire Swash", serif;
 }
 
-h2{
+h2 {
     padding: 0;
     margin: 0 ;
     font-family: "Berkshire Swash", serif;
@@ -41,10 +41,9 @@ h2{
     font-size: clamp(14px, 3vw, 35px);
 }
 
-h3{
+h3 {
     margin: 0 ;
     padding: 0;
-    margin-bottom: 20px;
     font-family: "Sansita", sans-serif;
     font-size: clamp(14px, 1.8vw, 35px);
     font-weight: bold; /* Makes text bold */
@@ -74,11 +73,11 @@ h4{
 ul{
     margin: 0;
     padding: 0;
-    margin-left:10px;
+    margin-left:15px;
 }
 
 li{
-    margin: 20px 0;
+    margin: 10px 0;
     font-size: clamp(14px, 1.3vw, 18px); 
     
 }
@@ -293,29 +292,6 @@ section {
     margin-top: 1vw;
 }
 
-/* Styles spécifiques pour chaque rectangle */
-.project1 {
-    height: 33vw; /* Hauteur spécifique */
-    max-height: 330px;
-    background-color: var(--orange); /* Couleur de fond spécifique */
-}
-
-.project2 {
-    height: 38vw;
-    max-height: 380px;
-    background-color: var(--orange); /* Couleur différente pour le project 2 */
-}
-
-.project3 {
-    height: 29vw;
-    max-height: 290px;
-    background-color: var(--orange); 
-}
-
-p{
-    margin:10px;
-}
-
 footer {
     text-align: center;
     padding: 0;
@@ -376,7 +352,7 @@ footer {
     flex-direction: column;
     align-items: center;
     /*background-color: #81d872;*/
-    margin-left: 35vw; /*Ajoute une marge pour éviter de chevaucher la barre latérale */
+    margin-left: 32vw; /*Ajoute une marge pour éviter de chevaucher la barre latérale */
     padding: 20px; /* Espacement interne */
     flex-grow: 1;
     overflow-y: auto; /* Permet de faire défiler le contenu */
@@ -445,21 +421,17 @@ footer {
 .common-section {
     margin: 0 auto; /*Aucune marge extérieure*/
     padding: 0; /* Aucune marge intérieure */
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
     display: flex; /* Flexbox pour organiser les éléments */
-    flex-direction: column; /* Empile les éléments en colonne (image, puis texte) */
+    flex-direction: column; /* Empile les éléments en colonne */
     align-items: center;
-    padding-bottom: 50px;
-}
-.common-section p {
-    max-width: 50vw;
-    margin-bottom: 20px;    
+    padding-bottom: 5vw;
+    gap:3vw;
 }
 
-.common-section h2 {
-    margin-bottom:4vw;
-    max-width: 50vw;
+#description {
+    text-align: center;
 }
 
 .img-center {
@@ -515,13 +487,53 @@ footer {
     margin-right: auto;
 }
 
-/* Process section styling */
+.project {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;  
+}
+
+
+.bloc {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    padding-bottom: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+
+}
+.content-container-col {
+    display: flex;
+    gap: 20px;   
+}
+
+.images {
+    margin-bottom: 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 50px; /* Space between images */
+    justify-content: center;
+}
+
+.project-image {
+    margin-top: 40px;
+    width: 100%; /* Makes sure images fit in the right column */
+    height: auto; /* Keeps aspect ratio */
+    border-radius: 5px; /* Optional rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .process {
+    display: flex;
+    flex-direction: column;
     flex: 2;
     padding-left: 20px;
     border-left: 3px solid var(--orange);
     margin-bottom: 20px;
     max-width: 60%;
+    gap:15px;
 }
 
 .process p {
@@ -541,35 +553,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Project image styling */
-.project-image {
-    max-width: 60%;
-    height: auto;
-    margin-top: 40px;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.content-container-col {
-    display: flex;
-    gap: 20px; /* Space between the text and images */  
-}
-
-.images{
-    margin-bottom: 30px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 50px; /* Space between images */
-    justify-content: center;
-}
-
-.project-image {
-    width: 100%; /* Makes sure images fit in the right column */
-    height: auto; /* Keeps aspect ratio */
-    border-radius: 5px; /* Optional rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
-}
 
 .buttons{
     width:100%;
@@ -624,6 +607,9 @@ a:hover {
   }
 
 .timeline-item {
+    display: flex;
+    flex-direction: column;
+    gap:20px;
     position: relative;
     margin: 30px 0px;
     padding:20px;
@@ -705,7 +691,7 @@ a:hover {
   
   /* Pour styliser la scrollbar */
   .timelineh-container::-webkit-scrollbar {
-    height: 10px;
+    height: 5px;
   }
   
   .timelineh-container::-webkit-scrollbar-thumb {
@@ -713,3 +699,76 @@ a:hover {
     border-radius: 10px;
   }
   
+  .languages {
+    display: flex;
+    align-items: center;
+    gap:1.5vw;
+    width: 100%;
+    height: auto;
+  }
+
+  .language {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 12vw;
+
+  }
+
+.circle-container {
+    position: relative;
+    width: 50px; /* Fixe la largeur du conteneur pour le cercle */
+    height: 50px; /* Fixe la hauteur du conteneur pour le cercle */
+    margin: 0 auto;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid black; /* Contour noir de base */
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    z-index: 1;
+}
+
+.circlevide{
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: white;
+    border: none;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    z-index: 3;
+}
+
+.progress{
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: conic-gradient(var(--orange) 0%, var(--orange) 0%, rgba(255, 255, 255, 0) 0%); /* Par défaut, cercle noir */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.progress.french{
+    background: conic-gradient(var(--orange) 100%, rgba(255, 255, 255, 0) 0%);
+
+}
+
+.progress.english{
+    background: conic-gradient(var(--orange) 70%, rgba(255, 255, 255, 0) 0%);
+}
+
+.progress.spanish{
+    background: conic-gradient(var(--orange) 25%, rgba(255, 255, 255, 0) 0%);
+}
+
+.progress.japanese{
+    background: conic-gradient(var(--orange) 5%, rgba(255, 255, 255, 0) 0%);
+}
