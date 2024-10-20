@@ -294,15 +294,15 @@ section {
 
 footer {
     text-align: center;
-    padding: 0;
+    padding: 6px;
     background-color: var(--grey);
     color: var(--pink);
     position: fixed;
     width: 100%;
-    height: 40px;
+    height: 30px;
     margin : 0;
     bottom: 0;
-    font-size: 13px;
+    font-size: 10px;
 }
 
 
@@ -378,6 +378,8 @@ footer {
 
 .info_container h2{
     text-align: left;
+    font-size: clamp(14px, 2.7vw, 35px);
+
 }
 
 .info_container p{
@@ -392,6 +394,18 @@ footer {
 .info_container:hover{
     transform: scale(1.05); /* Agrandit légèrement l'élément au survol */
 }
+
+.info_container:hover .project-more {
+    opacity: 1; /* Le texte devient visible uniquement lors du survol du parent */
+}
+
+p.project-more {
+    align-self: flex-end;
+    font-size: clamp(2px, 1vw, 14px);
+    color: var(--orange);
+    opacity: 0;
+}
+
 .rect_projects {
     display: flex; /* Flexbox pour organiser les éléments */
     flex-direction: column; /* Empile les éléments en colonne (image, puis texte) */
@@ -756,19 +770,20 @@ a:hover {
     left: 0;
     z-index: 2;
 }
-.progress.french{
+.progress.french {
     background: conic-gradient(var(--orange) 100%, rgba(255, 255, 255, 0) 0%);
 
 }
 
-.progress.english{
+.progress.english {
     background: conic-gradient(var(--orange) 70%, rgba(255, 255, 255, 0) 0%);
 }
 
-.progress.spanish{
+.progress.spanish {
     background: conic-gradient(var(--orange) 25%, rgba(255, 255, 255, 0) 0%);
 }
 
-.progress.japanese{
+.progress.japanese {
     background: conic-gradient(var(--orange) 5%, rgba(255, 255, 255, 0) 0%);
 }
+
