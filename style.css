@@ -726,6 +726,7 @@ a:hover {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    gap:1vw;
     width: 12vw;
 
   }
