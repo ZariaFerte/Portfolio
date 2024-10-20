@@ -788,3 +788,13 @@ a:hover {
     background: conic-gradient(var(--orange) 5%, rgba(255, 255, 255, 0) 0%);
 }
 
+.cart-contact{
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+    margin: 3vw;
+    padding: 5vw;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
