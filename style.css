@@ -303,6 +303,7 @@ footer {
     margin : 0;
     bottom: 0;
     font-size: 10px;
+    z-index: 4;
 }
 
 
@@ -532,7 +533,6 @@ p.project-more {
 }
 
 .project-image {
-    margin-top: 40px;
     width: 100%; /* Makes sure images fit in the right column */
     height: auto; /* Keeps aspect ratio */
     border-radius: 5px; /* Optional rounded corners */
@@ -797,4 +797,24 @@ a:hover {
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
+}
+
+.photo_colonne {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    gap:5vw;
+    margin:auto;
+    justify-content: center;
+    align-content: center;
+    width: 30%;
+    height: auto;
+}
+
+.project-video {
+    margin: auto;
+    width: 75%; 
+    height: auto; /* Keeps aspect ratio */
+    border-radius: 5px; /* Optional rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
